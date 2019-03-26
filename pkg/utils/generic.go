@@ -1,6 +1,8 @@
 package utils
 
-import "fmt"
+import (
+	"fmt"
+)
 
 // Hi returns a friendly greeting
 func Hi(name string) string {
@@ -30,4 +32,14 @@ func GetFibonacciSerie(seriesLength int) []int {
 		serie[i] = Fibonacci(i)
 	}
 	return serie
+}
+
+func SumLoop(seriesLength int) string {
+	sum := 0
+	for i := 0; i < seriesLength; i++ {
+		sum += i
+		fmt.Println(i)
+	}
+	seriesLengthNmber := seriesLength -1
+	return fmt.Sprintf("Sum from 0 till %d is %d", seriesLengthNmber, sum)
 }

@@ -3,6 +3,9 @@ Getting started with Go
 
 ## Initialize
 <pre>
-export GO111MODULE=on
-go mod init
+# tells go to be the root of the project
+go mod init github.com/nicor88/go-getting-started
 </pre>
+
+
+## Notes

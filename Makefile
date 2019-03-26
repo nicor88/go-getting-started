@@ -12,3 +12,6 @@ clean:
 
 execute: build
 	./bin/$(APP_NAME)
+
+test:
+	 go test -race -cover -v ./...
