@@ -5,10 +5,10 @@ run:
 
 
 build: clean
-	go build ./cmd/$(APP_NAME)
+	go build -o bin/$(APP_NAME) ./cmd/$(APP_NAME)
 
 clean:
-	rm -rf $(APP_NAME)
+	rm -rf bin/$(APP_NAME)
 
 execute: build
-	./$(APP_NAME)
+	./bin/$(APP_NAME)
