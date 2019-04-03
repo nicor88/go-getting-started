@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"github.com/nicor88/go-getting-started/pkg/aws"
+	"github.com/nicor88/go-getting-started/pkg/utils"
+	"time"
 )
 
 type MyConfig struct {
@@ -19,7 +21,9 @@ func (c *MyConfig) String() string {
 
 
 func init() {
+	startingTime := utils.UnixMillisToRFC3339(time.Now().UTC().UnixNano() / int64(time.Millisecond))
 	fmt.Println("Initializing the app...")
+	fmt.Println("Starting at:", startingTime)
 	aws.DynamoDBSession = aws.CreateDynamoDBSession()
 }
 

@@ -2,6 +2,7 @@ package utils
 
 import (
 	"fmt"
+	"time"
 )
 
 // Hi returns a friendly greeting
@@ -42,4 +43,8 @@ func SumLoop(seriesLength int) string {
 	}
 	seriesLengthNmber := seriesLength -1
 	return fmt.Sprintf("Sum from 0 till %d is %d", seriesLengthNmber, sum)
+}
+
+func UnixMillisToRFC3339(t int64) string {
+	return time.Unix(t/(1000), 0).UTC().Format(time.RFC3339)
 }
